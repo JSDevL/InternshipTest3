@@ -1,0 +1,730 @@
+/***********************************
+
+    SOME DEFAULT STYLING
+
+***********************************/
+
+@font-face {
+  font-family: "SourceSansPro-Bold";
+  src: url("../fonts/SourceSansPro-Bold.ttf") format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SourceSansPro-Semibold";
+  src: url("../fonts/SourceSansPro-Semibold.ttf") format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SourceSansPro-Regular";
+  src: url("../fonts/SourceSansPro-Regular.ttf") format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SourceSansPro-Light";
+  src: url("../fonts/SourceSansPro-Light.ttf") format('truetype');
+  font-weight: normal;
+}
+
+body{
+    display: table;
+    width: 100%;
+    background-color: #f2f2f2; /* color 1 */
+    
+    color: #2c2c2c;
+    font-family: "SourceSansPro-Regular";
+    font-size: 1rem;
+}
+
+a{
+    color: inherit;
+}
+
+/***********************************
+
+    MAIN PAGE STRUCTURE
+
+***********************************/
+
+
+/*
+    structure for side navigation bar
+*************************************/
+
+#side-nav{
+    display: table-cell;
+    width: 105px; /* varies with 1 */
+    
+    vertical-align: top;
+    
+    background-color: #2a2f31;
+}
+
+#side-nav #nav-container{
+    position: fixed;
+    max-height: 100%;
+    
+    overflow-y: hidden;
+}
+
+#side-nav > *{
+    width: 105px; /* varies with 1 */
+}
+
+#side-nav #logo{
+    width: 100%;
+	height:50px; /* varies with 2 */
+    line-height: 50px; /* varies with 2 */
+	
+	text-align: center;
+    
+    background-color: #3cb1e6; /* color 2 */
+}
+
+#side-nav #logo p{
+    /************************** start of override */
+    margin: 0px;
+    padding: 0px;
+    /************************** end of override */
+}
+
+#side-nav ul{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    /************************** start of override */
+    padding: 0px;
+    margin: 0px;
+    
+    list-style: none;
+    /************************** end of override */
+    
+    background-image: url("../images/nav-icons/nav-bg.png");
+}
+
+#side-nav li{
+    height: 90px;
+    line-height: 90px;
+    
+    text-align: center;
+    
+    border-style: solid;
+    border-bottom-color: #212527;
+    border-top-color: #373c3e;
+    border-width: 1px 0px 1px 0px;
+}
+
+#side-nav li.active{
+    background: #f2f2f2;
+    
+    border-style: solid;
+    border-color: #16aa4a;
+    border-width: 0px 0px 0px 5px;
+}
+
+#side-nav li a{
+    position: relative;
+    
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    
+    margin-top: 15px;
+    
+    border-radius: 100%;
+    background-color: #666;
+    
+    overflow: hidden !important;
+}
+
+#side-nav li a.profile img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+    width: 50px;
+    height:50px;
+    
+    transform: none;
+}
+
+#side-nav li.active a{
+    opacity: 1;
+    background-color: #3cb1e6;
+}
+
+#side-nav li.inactive a{
+    opacity: 0.4;
+}
+
+#side-nav li a img{
+    width: 50px;
+    height: 50px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-10px,-10px);
+    
+    -webkit-transition: width 0.7s,height 0.7s,transform 0.7s; /* Safari */
+    transition: width 0.7s,height 0.7s,transform 0.7s;
+}
+
+#side-nav li a img:hover{
+    width: 65px;
+    height: 65px;
+    
+    transform: translate(-14px,-14px);
+}
+
+#side-nav li a.profile img:hover{
+    width: 50px;
+    height: 50px;
+    
+    transform: none;
+}
+
+#side-nav li#menu-toggle{
+    display: none;
+}
+
+#side-nav li#menu-toggle a{
+    opacity: 1;
+}
+
+#side-nav li#menu-toggle img{
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+#side-nav li#menu-toggle img:hover{
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    transform: translate(-10px,-10px);
+    -webkit-transition: none; /* Safari */
+    transition: none;
+}
+
+/*
+    structure for content
+*************************************/
+
+#nav-content{
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    
+    vertical-align: top;
+}
+
+#nav-content #nav-header{
+    height: 50px; /* varies with 2 */
+    
+    overflow: hidden;
+
+    background-color: #d8d8d8; /* color 3 */
+}
+
+#nav-content #nav-header h2{
+    /************************** start of override */
+    /************************** varies with 3 */
+    padding: 0px 30px;
+    margin: 0px;
+    
+    font-size: 1.5rem; 
+    font-family: "SourceSansPro-Regular";
+    /************************** end of override */
+    
+    line-height: 50px; /* varies with 2 */
+}
+
+#nav-content #nav-header h2 span{
+    font-family: "SourceSansPro-light";
+}
+
+
+/***********************************
+
+    SEARCH NAVIGATION CONTENT STRUCTURE
+
+***********************************/
+
+
+#nav-content #content-body{
+    background-color: #f2f2f2; /* color 1 */
+}
+
+#nav-content #content-body > *{
+    box-sizing: border-box;
+}
+
+/*
+    search field
+*************************************/
+
+#nav-content #content-body #search-field{
+    display: block;
+    width: 100%;
+    /************************** varies with 3 and 4 */
+    padding: 20px 30px;
+}
+
+#nav-content #content-body #search-field > input{
+    width: 100%;
+    
+    padding: 10px 10px 10px 40px;
+    
+    font-family: "SourceSansPro-Semibold"; 
+    font-size: 1.5rem;
+    
+    border-style: solid;
+    border-color: #cacaca;
+    border-width: 1px;
+    
+    box-shadow: 1px 1px 3px 0px #cacaca;
+    -webkit-box-shadow: 1px 1px 3px 0px #cacaca;
+    -moz-box-shadow: 1px 1px 3px 0px #cacaca;
+    
+    background-image: url("../images/nav-icons/search-icon.png");
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+#nav-content #content-body #search-field #search-checkboxes{
+    /************************** varies with 5 */
+    padding: 10px 10px 10px 0px;
+}
+
+#nav-content #content-body #search-field #search-checkboxes input{
+    display: none;
+}
+
+#nav-content #content-body #search-field #search-checkboxes input + label{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    
+    margin: 0 10px;
+    
+    background-color: #d8d8d8;
+    
+    border-style: solid;
+    border-color: #d8d8d8;
+    border-width: 3px;
+    border-radius: 2px;
+    
+    vertical-align: middle;
+}
+
+#nav-content #content-body #search-field #search-checkboxes input:first-child + label{
+    margin-left: 0;
+}
+
+#nav-content #content-body #search-field #search-checkboxes input:checked + label{
+    background: #3cb1e6;
+}
+
+#nav-content #content-body #search-field #search-checkboxes label{
+    color: #2b2b2b;
+    vertical-align: middle;
+}
+
+/*
+    search results
+*************************************/
+
+#nav-content #content-body #search-results{
+    display: block;
+    
+    /************************** varies with 3 and 4 */
+    padding: 0px 30px 20px 30px;
+}
+
+#nav-content #content-body #search-results #search-container{
+    display: table;
+    width: 100%;
+    
+    background-color: white;
+    
+    /* varies with search box */
+    border-style: solid;
+    border-color: #cacaca;
+    border-width: 1px;
+    
+    box-shadow: 1px 1px 0px 0px #cacaca;
+    -webkit-box-shadow: 1px 1px 3px 0px #cacaca;
+    -moz-box-shadow: 1px 1px 3px 0px #cacaca;
+}
+
+#nav-content #content-body #search-results #search-container > div:first-child{
+    display: table-cell;
+    height: 100%;  
+    width: 60px; /* varies with 7 */
+    
+    /************************** varies with 8 */
+	border-style: solid;
+	border-color: #e5e5e5;
+	border-width: 0px 3px 0px 0px;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container{
+    display: table-cell;
+    height: 100%;
+    
+    /************************** start of override */
+    padding: 0px;
+    margin: 0px;
+    
+    list-style: none;
+    /************************** end of override */
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li{
+    display: block;
+	position: relative;
+	
+    padding: 15px; /* varies with 11 */
+    padding-left: 60px; /* varies with 7 */
+    
+    /************************** varies with 8 */
+    border-style: solid;
+    border-color: #f5f5f5;
+    border-width: 1px;
+    border-width: 0px 0px 1px 0px;
+    
+    -webkit-transition: background 0.7s; /* Safari */
+    transition: background 0.7s;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li:hover{
+    background: #f2f2f2;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li:last-child{
+    border: none;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li:last-child button{
+    display: block;
+    width: 100%;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .date-object{
+	position: absolute;
+    
+    /************************** varies with 11 */
+	top: 15px;
+	/************************** varies with 9 */
+    left:0px;
+    
+    text-align: center;
+    
+	transform : translateX(-50%);
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .date-object .date-icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    
+    margin-bottom: 10px;
+    
+    background-color: #3cb1e6;
+    
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 100%;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .date-object .date-icon img{
+    width: 17px;
+    
+    transform: translateY(-50%);
+    margin-top: 50%;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .date-object .date{
+    padding: 5px 10px;
+    
+    font-family: "SourceSansPro-Bold";
+    color: #666;
+    
+    background-color: #e5e5e5;
+}
+
+/*
+    search result types - Attachments
+*************************************/
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment{
+    display: table;
+    width: 100%;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment .attachment-icon{
+    display: table-cell;
+    width: 50px;
+    height: 50px;
+    
+    vertical-align: top;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment .attachment-icon img{
+    width: 37px;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment .attachment-body{
+    display: table-cell;
+    
+    vertical-align: top;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment .attachment-body > h3{
+    margin: 0px;
+    
+    color: #2c2c2c;
+    font-family: "SourceSansPro-Bold";
+    font-size: 1.045rem;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment .attachment-body > p{
+    margin:0px;
+    
+    color: #5c5c5c;
+    font-size: 0.87125rem;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment .attachment-body > p span{
+    color: #333;
+    font-family: "SourceSansPro-Light";
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment .attachment-body .attachment-link a{
+    color: #3482a5;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment .attachment-body .attachment-tags .tags{
+    display: inline-block;
+    
+    margin-top: 15px;
+    padding: 3px 5px;
+    
+    color: white;
+    font-size: 0.8rem;
+    
+    background-color: #666;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment .attachment-body .attachment-tags .tags a{
+    font-family: "SourceSansPro-Bold"; 
+    text-decoration: none;
+}
+
+
+/*
+    search result types - Attachment-preview
+*************************************/
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment-preview{
+    display: table-row;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment-preview .preview{
+    display: inline-block;
+    
+    /************************** varies with 11 */
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment-preview .preview .preview-image img{
+    max-width: 235px;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment-preview .preview .preview-body h3{
+    margin: 0px;
+    
+    color: #2c2c2c;
+    font-family: "SourceSansPro-Bold";
+    font-size: 1.045rem;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment-preview .preview .preview-body span{
+    color: #333;
+    font-family: "SourceSansPro-Light";
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li div.attachment-preview .preview .preview-link{
+    display: inline-block;
+    margin-top: 5px;
+    
+    color: #3482a5;
+    font-family: "SourceSansPro-Semibold";
+    text-decoration: none;
+}
+
+/*
+    search result types - Message
+*************************************/
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .message{
+    display: table;
+    width: 100%;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .message .sender{
+    display: table-cell;
+    
+    /************************** varies with 11 */
+    width: 150px;
+    
+    font-size: 0.875rem;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .message .sender img{
+    width: 52px;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .message .sender h3{
+    margin: 0px;
+    
+    font-family: "SourceSansPro-Bold";
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .message .sender span{
+    color: #666;
+    font-family: "SourceSansPro-Light";
+    font-style: italic;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .message .content{
+    display: table-cell;
+    
+    vertical-align: top;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .message .content h3{
+    margin: 0px;
+    font-family: "SourceSansPro-Semibold";
+    font-size: 1rem;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .message .content p{
+    margin: 0px;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .message .content .message-link span{
+    color: #666;
+    font-size: 0.875rem;
+    font-family: "SourceSansPro-Light";
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .message .content .message-link a{
+    font-family: "SourceSansPro-Semibold";
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .notifications .notification{
+    margin-bottom: 25px;
+    font-family: "SourceSansPro-Light";
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .notifications .notification p{
+    margin: 0px;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .notifications .notification p.line-through{
+    color: #666;
+    text-decoration: line-through;
+}
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li .notifications .notification a{
+    display: inline-block;
+    margin-right: 10px;
+    
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+
+/*
+    search result types - Message
+*************************************/
+
+/*
+    search result types - More button
+*************************************/
+
+#nav-content #content-body #search-results #search-container ul#search-inner-container li:last-child button{
+    height: 30px;
+    
+    /************************** start of override */
+    background: #ebebeb;
+    border: none;
+    /************************** end of override */
+}
+
+@media only screen and (max-width: 640px) {
+    
+    #side-nav{
+        display: block;
+        width: 100%;
+    }
+    
+    #side-nav #nav-container{
+        position: relative;
+        width: 100%;
+    }
+    
+    
+    #side-nav #logo{
+        width: 100%;
+    }
+    
+    #side-nav ul{
+        display: inline-block;
+        width: 100%;
+        
+        text-align: center;
+        
+        border: none;
+    }
+    
+    #side-nav li{
+        display: block;
+        width: 100%;
+        
+        border: none;
+        
+        height: 0px;
+        
+        transition: height 0.7s;
+    }
+    
+    #side-nav li.open{
+        height: 90px;
+    }
+    
+    #side-nav li.active{
+        background: #222;
+        border: none;
+    }
+    
+    #side-nav li#menu-toggle{
+        display: block;
+        height: 90px;
+    }
+    
+    #nav-content{
+        display: block;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    
+}
